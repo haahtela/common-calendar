@@ -1,10 +1,10 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/datepicker',
+  entry: './src/calendar',
   output: {
     libraryTarget: 'umd',
-    library: 'DatePicker',
+    library: 'Calendar',
     path: './dist/'
   },
   module: {

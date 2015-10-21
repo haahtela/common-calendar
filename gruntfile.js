@@ -3,6 +3,7 @@
 var _ = require( "lodash" );
 var webpack = require( "webpack" );
 
+
 var mergeWebpackConfig = function( config ) {
 
   // Load webpackConfig only when using `grunt:webpack`
@@ -16,12 +17,13 @@ var mergeWebpackConfig = function( config ) {
 };
 
 module.exports = function( grunt ) {
+  require('load-grunt-tasks')(grunt);
   grunt.initConfig( {
     pkg: grunt.file.readJSON( "package.json" ),
     sass: {
       min: {
         files: {
-          "dist/react-datepicker.css": "src/stylesheets/datepicker.scss"
+          "dist/react-calendar.css": "src/stylesheets/datepicker.scss"
         },
         options: {
           sourcemap: "none",
@@ -30,11 +32,7 @@ module.exports = function( grunt ) {
       },
       unmin: {
         files: {
-          "dist/react-datepicker.min.css": "src/stylesheets/datepicker.scss"
-        },
-        options: {
-          sourcemap: "none",
-          style: "compressed"
+          "dist/react-calendar.min.css": "src/stylesheets/datepicker.scss"
         }
       }
     },
@@ -101,12 +99,12 @@ module.exports = function( grunt ) {
     webpack: {
       unmin: mergeWebpackConfig( {
         output: {
-          filename: "react-datepicker.js"
+          filename: "react-calendar.js"
         }
       } ),
       min: mergeWebpackConfig( {
         output: {
-          filename: "react-datepicker.min.js"
+          filename: "react-calendar.min.js"
         },
         plugins: [
           new webpack.optimize.UglifyJsPlugin( {
@@ -119,7 +117,6 @@ module.exports = function( grunt ) {
     }
   } );
 
-  grunt.loadNpmTasks( "grunt-contrib-sass" );
   grunt.loadNpmTasks( "grunt-scss-lint" );
   grunt.loadNpmTasks( "grunt-contrib-watch" );
   grunt.loadNpmTasks( "grunt-webpack" );
@@ -128,5 +125,5 @@ module.exports = function( grunt ) {
 
   grunt.registerTask( "default", [ "watch", "scsslint" ] );
   grunt.registerTask( "travis", [ "jscs", "karma", "scsslint" ] );
-  grunt.registerTask( "build", [ "scsslint", "webpack", "sass" ] );
+  grunt.registerTask( "build", [ "webpack", "sass" ] );
 };

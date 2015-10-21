@@ -1,26 +1,16 @@
 {
-  "author": "HackerOne",
-  "name": "react-datepicker",
-  "description": "A simple and reusable datepicker component for React",
-  "version": "0.14.4",
+  "author": "Joni Rajanen",
+  "name": "react-calendar",
+  "description": "A calendar component for React. Forked from react-datepicker.",
+  "version": "0.0.1",
   "license": "MIT",
-  "homepage": "https://github.com/Hacker0x01/react-datepicker",
-  "main": "dist/react-datepicker.min.js",
-  "style": "dist/react-datepicker.min.css",
+  "main": "dist/react-calendar.min.js",
+  "style": "dist/react-calendar.min.css",
   "keywords": [
     "react",
-    "datepicker",
     "calendar",
-    "date",
     "react-component"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/Hacker0x01/react-datepicker.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Hacker0x01/react-datepicker/issues"
-  },
   "devDependencies": {
     "babel": "^5.6.4",
     "babel-core": "^5.6.4",
@@ -32,6 +22,7 @@
     "grunt-contrib-watch": "0.6.1",
     "grunt-jscs": "^2.0.0",
     "grunt-karma": "^0.12.0",
+    "grunt-sass": "^1.1.0-beta",
     "grunt-scss-lint": "^0.3.4",
     "grunt-webpack": "^1.0.8",
     "karma": "^0.13.3",
@@ -43,6 +34,7 @@
     "karma-sinon": "^1.0.4",
     "karma-sourcemap-loader": "^0.3.5",
     "karma-webpack": "^1.7.0",
+    "load-grunt-tasks": "^3.3.0",
     "mocha": "^2.2.5",
     "phantomjs": "^1.9.17",
     "react": ">=0.12 <0.15",
@@ -63,5 +55,16 @@
   },
   "scripts": {
     "test": "grunt travis"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonira/react-datepicker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonira/react-datepicker/issues"
+  },
+  "homepage": "https://github.com/jonira/react-datepicker"
 }
