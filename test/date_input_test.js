@@ -1,6 +1,6 @@
-var React = require( "react" );
-var ReactDOM = require( "react-dom" );
-var TestUtils = require( "react-addons-test-utils" );
+var React = require( "react/addons" );
+var TestUtils = React.addons.TestUtils;
+
 var DateInput = require( "../src/date_input.jsx" );
 
 describe( "DateInput", function() {
@@ -12,7 +12,7 @@ describe( "DateInput", function() {
       <DateInput date={dateMock} handleEnter={done} />
     );
 
-    TestUtils.Simulate.keyDown( ReactDOM.findDOMNode( dateInput ), { key: "Enter" } );
+    TestUtils.Simulate.keyDown( React.findDOMNode( dateInput ), { key: "Enter" } );
   } );
 
   it( "adds disabled attribute to input field when disabled is passed as prop", function() {
@@ -28,6 +28,6 @@ describe( "DateInput", function() {
       <DateInput className="datepicker__custom-input" />
     );
 
-    expect( ReactDOM.findDOMNode( dateInput ).className ).to.equal( "datepicker__custom-input" );
+    expect( React.findDOMNode( dateInput ).className ).to.equal( "datepicker__custom-input" );
   } );
 } );
