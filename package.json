@@ -2,7 +2,7 @@
   "author": "Joni Rajanen",
   "name": "common-calendar",
   "description": "A calendar component for React. Forked from react-datepicker.",
-  "version": "0.0.2",
+  "version": "0.0.2-reactv0.13",
   "license": "MIT",
   "main": "dist/react-calendar.min.js",
   "style": "dist/react-calendar.min.css",
