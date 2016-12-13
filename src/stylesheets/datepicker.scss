@@ -3,10 +3,10 @@
 
 .datepicker {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  background-color: #fff;
+  font-size: 12px;
+  background-color: #f5f7fa;
   color: $text-color;
-  border: 1px solid $border-color;
+  border: 1px solid #cfdbe2;
   border-radius: $border-radius;
   display: inline-block;
   position: relative;
@@ -42,9 +42,10 @@
 }
 
 .datepicker__current-month {
-  color: black;
-  font-weight: bold;
-  font-size: 13px;
+    font-family: 'lato-BoldItalic', Helvetica, Arial;
+    color: #007fc1;
+    font-weight: bold;
+    font-size: 13px;
 }
 
 .datepicker__navigation {
@@ -53,24 +54,30 @@
   cursor: pointer;
   position: absolute;
   top: 10px;
-  width: 0;
+  //width: 0; (original width, can't see changes yet)
+  width: 6px;
+  height: 9px;
   border: 6px solid transparent;
 
   &--previous {
-    left: 10px;
-    border-right-color: $muted-color;
+    content: '\e408';
+    color: #7a95a6;
+    //left: 10px;
+    //border-right-color: $muted-color;
 
     &:hover {
-      border-right-color: darken($muted-color, 10%);
+      //border-right-color: darken($muted-color, 10%);
     }
   }
 
   &--next {
-    right: 10px;
-    border-left-color: $muted-color;
+    content: '\e409';
+    color: #7a95a6;
+    //right: 10px;
+    //border-left-color: $muted-color;
 
     &:hover {
-      border-left-color: darken($muted-color, 10%);
+      //border-left-color: darken($muted-color, 10%);
     }
   }
 }
@@ -88,17 +95,18 @@
 }
 
 .datepicker__day {
-  color: $text-color;
-  display: inline-block;
-  width: $item-size;
-  line-height: $item-size;
-  text-align: center;
-  margin: $day-margin;
-  cursor: pointer;
+    font-family: 'lato-BoldItalic', Helvetica, Arial;
+    color: #6d6e71;
+    display: inline-block;
+    width: $item-size;
+    line-height: $item-size;
+    text-align: center;
+    margin: $day-margin;
+    cursor: pointer;
 
   &:hover {
     border-radius: $border-radius;
-    background-color: $background-color;
+    background-color: #eff6fc;
   }
 
   &--today {
