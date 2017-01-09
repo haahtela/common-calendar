@@ -49,34 +49,40 @@
     }
 
 .datepicker__navigation {
+    font-family: 'MaterialIcons';
     line-height: $item-size;
+    font-size: 18px;
     text-align: center;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
     //width: 0; (original width, can't see changes yet)
-    width: 6px;
-    height: 9px;
     border: 6px solid transparent;
 
     &--previous {
-    content: "\E408";
-    color: #7a95a6;
 
-    &:hover {
-    //border-right-color: darken(#7a95a6, 10%);
+        &::after {
+            content: "\E408";
+            color: #7a95a6;
+        }
+
+        &:hover::after {
+            color: #007fc1;
+            text-decoration: none;
+        }
     }
-}
 
     &--next {
-        content: "\E409";
-        color: #7a95a6;
 
-    &:hover {
-          //border-left-color: darken(#7a95a6, 10%);
+        &::after {
+            content: "\E409";
+            color: #7a95a6;
         }
-      }
+
+        &:hover::after {
+            color: #007fc1;
+            text-decoration: none;
+        }
     }
+}
 
 .datepicker__week-day {
       color: $muted-color;
