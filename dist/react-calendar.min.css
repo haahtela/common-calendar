@@ -55,34 +55,38 @@
 
 .datepicker__header {
   text-align: center;
-  background-color: #f0f0f0;
-  border-bottom: 1px solid #aeaeae;
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #cfdbe2;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   padding-top: 8px;
   position: relative; }
 
 .datepicker__current-month {
-  font-family: 'lato-BoldItalic', Helvetica, Arial;
+  font-family: "lato-BoldItalic", Helvetica, Arial;
   color: #007fc1;
   font-weight: bold;
-  font-size: 13px; }
+  font-size: 16px; }
 
 .datepicker__navigation {
+  font-family: "MaterialIcons";
   line-height: 24px;
+  font-size: 18px;
   text-align: center;
   cursor: pointer;
-  position: absolute;
-  top: 10px;
-  width: 6px;
-  height: 9px;
   border: 6px solid transparent; }
-  .datepicker__navigation--previous {
-    content: '\e408';
+  .datepicker__navigation--previous::after {
+    content: "\E408";
     color: #7a95a6; }
-  .datepicker__navigation--next {
-    content: '\e409';
+  .datepicker__navigation--previous:hover::after {
+    color: #007fc1;
+    text-decoration: none; }
+  .datepicker__navigation--next::after {
+    content: "\E409";
     color: #7a95a6; }
+  .datepicker__navigation--next:hover::after {
+    color: #007fc1;
+    text-decoration: none; }
 
 .datepicker__week-day {
   color: #ccc;
@@ -91,11 +95,13 @@
   line-height: 24px; }
 
 .datepicker__month {
-  margin: 5px;
-  text-align: center; }
+  padding: 5px;
+  text-align: center;
+  background: #fff; }
 
 .datepicker__day {
   font-family: 'lato-BoldItalic', Helvetica, Arial;
+  font-size: 12px;
   color: #6d6e71;
   display: inline-block;
   width: 24px;
@@ -110,10 +116,10 @@
     font-weight: bold; }
   .datepicker__day--selected {
     border-radius: 4px;
-    background-color: #216ba5;
+    background-color: #0096d6;
     color: #fff; }
     .datepicker__day--selected:hover {
-      background-color: #1d5d90; }
+      background-color: #0084bd; }
   .datepicker__day--disabled {
     cursor: default;
     color: #ccc; }
