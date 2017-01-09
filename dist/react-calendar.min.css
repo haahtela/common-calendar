@@ -78,15 +78,17 @@
   .datepicker__navigation--previous::after {
     content: "\E408";
     color: #7a95a6; }
-  .datepicker__navigation--previous:hover::after {
-    color: #007fc1;
+  .datepicker__navigation--previous:hover {
     text-decoration: none; }
+    .datepicker__navigation--previous:hover::after {
+      color: #007fc1; }
   .datepicker__navigation--next::after {
     content: "\E409";
     color: #7a95a6; }
-  .datepicker__navigation--next:hover::after {
-    color: #007fc1;
+  .datepicker__navigation--next:hover {
     text-decoration: none; }
+    .datepicker__navigation--next:hover::after {
+      color: #007fc1; }
 
 .datepicker__week-day {
   color: #ccc;
