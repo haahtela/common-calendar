@@ -42,20 +42,31 @@
   }
 
 .datepicker__current-month {
+  display: flex;
+  align-self: baseline;
   font-family: "lato-BoldItalic", Helvetica, Arial;
   color: #007fc1;
   font-weight: bold;
   font-size: 16px;
+  padding: 0 10px;
   }
+
+.datepicker__navigation--parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+}
 
 .datepicker__navigation {
   font-family: "MaterialIcons";
-  line-height: $item-size;
+  display: flex;
+  height: 100%;
   font-size: 18px;
   text-align: center;
   cursor: pointer;
   //width: 0; (original width, can't see changes yet)
-  border: 6px solid transparent;
 
   &--previous {
 

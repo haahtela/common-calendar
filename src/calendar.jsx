@@ -136,15 +136,17 @@ var Calendar = React.createClass( {
       <div className="datepicker">
         <div className="datepicker__triangle"></div>
         <div className="datepicker__header">
-          <a className="datepicker__navigation datepicker__navigation--previous"
-              onClick={this.decreaseMonth}>
-          </a>
-          <span className="datepicker__current-month">
-            {this.state.date.localeFormat( this.props.locale, this.props.dateFormat )}
-          </span>
-          <a className="datepicker__navigation datepicker__navigation--next"
-              onClick={this.increaseMonth}>
-          </a>
+          <div className="datepicker__navigation--parent">
+            <a className="datepicker__navigation datepicker__navigation--previous"
+                onClick={this.decreaseMonth}>
+            </a>
+            <span className="datepicker__current-month">
+              {this.state.date.localeFormat( this.props.locale, this.props.dateFormat )}
+            </span>
+            <a className="datepicker__navigation datepicker__navigation--next"
+                onClick={this.increaseMonth}>
+            </a>
+          </div>
           <div>
             {this.header()}
           </div>
